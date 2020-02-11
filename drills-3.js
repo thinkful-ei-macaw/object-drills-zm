@@ -26,3 +26,10 @@ for (const key in obj) {
     console.log(`${key}: '${obj[key]}'`);
   }
 }
+
+// problem 3 =========================
+let hobbit = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+
+console.log(hobbit.meals[3])
