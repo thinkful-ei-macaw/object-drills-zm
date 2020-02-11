@@ -33,3 +33,15 @@ function enrollInSummerSchool(students) {
   });
   return students;
 }
+
+
+function findById(items, idNum) {
+  // your code here
+  let output;
+  items.forEach(item => {
+    if (item.id === idNum){
+      output = item;
+    }
+  });
+  return output;
+}
