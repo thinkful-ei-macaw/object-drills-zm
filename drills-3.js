@@ -74,7 +74,7 @@ function createCharacter(name, nickname, race, origin, attack, defense){
   return {
     name, nickname, race, origin, attack, defense,
     describe : function(){
-      return `${this.name} is a ${this.race} from ${this.origin}.`;
+      console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
     },
     evaluateFight : function(character){
       let x = character.defense > this.attack ? 0 : this.attack - character.defense;
@@ -94,8 +94,8 @@ let characters = [
 
 characters.push(createCharacter('Arwen Undomiel', 'arwen', 'Half-Elf', 'Rivendell', 10, 10));
 
-let newVar = characters.find(character => character.nickname === 'aragorn');
-console.log(newVar.describe());
+let chosenOne = characters.find(character => character.nickname === 'aragorn');
+chosenOne.describe();
 
 let hobbits = characters.filter(character => character.race === 'Hobbit');
 
