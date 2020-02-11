@@ -51,3 +51,20 @@ people.forEach(person => {
     console.log(`${person.name} the ${person.jobTitle} doesn't report to anyone.`)
   }
 });
+
+
+// problem 6 =========================
+function decode(word){
+  let cipher = { a: 2, b: 3, c: 4, d: 5 };
+  let firstLetter = word[0];
+
+  return cipher[firstLetter] ? word.charAt(cipher[firstLetter] - 1) : ' ';
+}
+
+function decodeWords(sentence){
+  let message = '';
+  sentence.split(' ').forEach(word => message += decode(word));
+  return message;
+}
+
+console.log(decodeWords('craft block argon meter bells brown croon droop'));
