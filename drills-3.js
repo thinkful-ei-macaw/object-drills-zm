@@ -36,11 +36,18 @@ let hobbit = {
 console.log(hobbit.meals[3]);
 
 
-// problem 4 =========================
-let a = {name: "Albert", jobTitle: "Anchorman"};
-let b = {name: "Beth", jobTitle: "Bus Driver"};
-let c = {name: "Chris", jobTitle: "Chaplain"};
-let d = {name: "Dylan", jobTitle: "Domino's Delivery Driver"};
-let e = {name: "Elizabeth", jobTitle: "Entertainer"}
-let people = [a, b, c, d, e];
-people.forEach(person => console.log(`${person.name} the ${person.jobTitle}`));
+// problem 4 + 5 =======================
+let a = {name: "Albert", jobTitle: "Anchorman", boss: "Fred"};
+let b = {name: "Beth", jobTitle: "Bus Driver", boss: "Fred"};
+let c = {name: "Chris", jobTitle: "Chaplain", boss: "Fred"};
+let d = {name: "Dylan", jobTitle: "Domino's Delivery Driver", boss: "Fred"};
+let e = {name: "Elizabeth", jobTitle: "Entertainer", boss: "Fred"};
+let f = {name: "Fred", jobTitle: "Founder"};
+let people = [a, b, c, d, e, f];
+people.forEach(person => {
+  if (person.boss){
+    console.log(`${person.name} the ${person.jobTitle} reports to ${person.boss}`)
+  } else {
+    console.log(`${person.name} the ${person.jobTitle} doesn't report to anyone.`)
+  }
+});
