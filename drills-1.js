@@ -20,7 +20,6 @@ function updateObject(obj, key) {
   return obj;
 }
 
-
 function personMaker() {
   var person = {
     firstName: 'Paul',
@@ -33,4 +32,17 @@ function personMaker() {
     }
   };
   return person;
+}
+
+const sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang',
+};
+
+function keyDeleter(obj) {
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
 }
