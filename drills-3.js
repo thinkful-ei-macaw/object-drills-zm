@@ -27,9 +27,20 @@ for (const key in obj) {
   }
 }
 
+
 // problem 3 =========================
 let hobbit = {
   meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
 
-console.log(hobbit.meals[3])
+console.log(hobbit.meals[3]);
+
+
+// problem 4 =========================
+let a = {name: "Albert", jobTitle: "Anchorman"};
+let b = {name: "Beth", jobTitle: "Bus Driver"};
+let c = {name: "Chris", jobTitle: "Chaplain"};
+let d = {name: "Dylan", jobTitle: "Domino's Delivery Driver"};
+let e = {name: "Elizabeth", jobTitle: "Entertainer"}
+let people = [a, b, c, d, e];
+people.forEach(person => console.log(`${person.name} the ${person.jobTitle}`));
